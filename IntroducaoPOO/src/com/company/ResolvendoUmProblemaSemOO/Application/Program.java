@@ -1,28 +1,27 @@
 package com.company.ResolvendoUmProblemaSemOO.Application;
 
+import com.company.ResolvendoUmProblemaSemOO.Entities.Triangle;
+
 import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        double xA, xB, xC, yA, yB, yC;
-
-        System.out.println("Enter the measure of triangle X: ");
-        xA = sc.nextDouble();
-        xB = sc.nextDouble();
-        xC = sc.nextDouble();
+        Triangle y = new Triangle();
+        Triangle x = new Triangle();
 
         System.out.println("Enter the measure of triangle X: ");
-        yA = sc.nextDouble();
-        yB = sc.nextDouble();
-        yC = sc.nextDouble();
+        x.a = sc.nextDouble();
+        x.b = sc.nextDouble();
+        x.c = sc.nextDouble();
 
-        double p = (xA + xB + xC) /2;
-        double areaX = Math.sqrt(p * (p - xA) * (p - xB) * (p - xC));
+        System.out.println("Enter the measure of triangle Y: ");
+        y.a = sc.nextDouble();
+        y.b = sc.nextDouble();
+        y.c = sc.nextDouble();
 
-        p = (yA + yB + yC) /2;
-        double areaY = Math.sqrt(p * (p - xA) * (p - xB) * (p - xC));
+        double areaX = x.area();
+        double areaY = y.area();
 
         System.out.printf("Triangle X area: %.4f%n", areaX);
         System.out.printf("Triangle Y area: %.4f%n", areaY);
